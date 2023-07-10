@@ -5,18 +5,10 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Maintained%3F-Yes-green?style=for-the-badge">
   <img src="https://img.shields.io/github/license/adi1090x/polybar-themes?style=for-the-badge">
   <img src="https://img.shields.io/github/stars/adi1090x/polybar-themes?style=for-the-badge">
   <img src="https://img.shields.io/github/issues/adi1090x/polybar-themes?color=violet&style=for-the-badge">
   <img src="https://img.shields.io/github/forks/adi1090x/polybar-themes?color=teal&style=for-the-badge">
-</p>
-
-<p align="center">
-  <a href="https://www.buymeacoffee.com/adi1090x" target="_blank"><img alt="undefined" width="48px" src="https://raw.githubusercontent.com/adi1090x/files/master/other/1.png"></a>
-  <a href="https://ko-fi.com/adi1090x" target="_blank"><img alt="undefined" width="48px" src="https://raw.githubusercontent.com/adi1090x/files/master/other/2.png"></a>
-  <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=U3VK2SSVQWAPN" target="_blank"><img alt="undefined" width="48px" src="https://raw.githubusercontent.com/adi1090x/files/master/other/3.png"></a>
-  <a href="https://www.patreon.com/adi1090x" target="_blank"><img alt="undefined" width="48px" src="https://raw.githubusercontent.com/adi1090x/files/master/other/4.png"></a>
 </p>
 
 <p align="center">
@@ -34,11 +26,11 @@
   <a href="https://github.com/adi1090x/polybar-themes#pwidgets" target="_blank"><img alt="undefined" src="https://img.shields.io/badge/pwidgets-cyan?style=for-the-badge"></a>
 </p>
 
-<p align="center">A huge collection of <a href="https://github.com/jaagr/polybar">polybar</a> themes with different styles, colors and variants.</p>
+<p align="center">A huge collection of <a href="https://github.com/polybar/polybar">polybar</a> themes with different styles, colors and variants.</p>
 
 ##
 
-<a href="https://github.com/jaagr/polybar"><b>Polybar</b></a> aims to help users build beautiful and highly customizable status bars for their desktop environment, without the need of having a black belt in shell scripting.
+<a href="https://github.com/polybar/polybar"><b>Polybar</b></a> aims to help users build beautiful and highly customizable status bars for their desktop environment, without the need of having a black belt in shell scripting.
 
 The main purpose of Polybar is to help users create awesome status bars. It has built-in functionality to display information about the most commonly used services. Some of the services included so far... 
 
@@ -58,7 +50,7 @@ The main purpose of Polybar is to help users create awesome status bars. It has 
 - Command output tailing
 - User-defined menu tree
 - Inter-process messaging
-- And <a href="https://github.com/jaagr/polybar">more</a>... 
+- And <a href="https://github.com/polybar/polybar">more</a>... 
 
 ### Dependencies
 
@@ -168,6 +160,20 @@ You can add these lines, before the launch command in your WM startup file if yo
 bash ~/.config/polybar/material/scripts/pywal.sh /path/to/wallpaper_dir
 bash ~/.config/polybar/launch.sh --material
 ```
+
+---
+
+<p align="center">
+  <a href="https://github.com/sponsors/adi1090x"><img src="https://raw.githubusercontent.com/adi1090x/rofi/master/previews/sponsor.png" width="256px"></a>
+</p>
+
+<p align="center">
+  <b>Special thanks to all the Sponsors</b>. Maintenance of this project is made possible by you guys. If you'd like to sponsor this project and have your avatar appear below, <a href="https://github.com/sponsors/adi1090x">click here</a> 💖
+</p>
+
+<p align="center">
+  <!-- sponsors --><a href="https://github.com/Cir-0"><img src="https://github.com/Cir-0.png" width="60px" alt="David N" /></a><a href="https://github.com/pedrosrtavares"><img src="https://github.com/pedrosrtavares.png" width="60px" alt="Pedro Tavares" /></a><a href="https://github.com/jeandutoit"><img src="https://github.com/jeandutoit.png" width="60px" alt="" /></a><a href="https://github.com/machist"><img src="https://github.com/machist.png" width="60px" alt="" /></a><a href="https://github.com/LukeTheEngineer"><img src="https://github.com/LukeTheEngineer.png" width="60px" alt="Lukas Jackson" /></a><!-- sponsors -->
+</p>
 
 ---
 
