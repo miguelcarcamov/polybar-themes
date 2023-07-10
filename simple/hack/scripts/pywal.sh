@@ -13,23 +13,24 @@ pywal_get() {
 # Change colors
 change_color() {
 	# polybar
-	sed -i -e "s/background = #.*/background = $BG/g" $PFILE
+	BG_TRANSPARENCY="${BG/"#"/"#aa"}"
+    sed -i -e "s/background = #.*/background = $BG_TRANSPARENCY/g" $PFILE
 	sed -i -e "s/foreground = #.*/foreground = $FG/g" $PFILE
 	sed -i -e "s/primary = #.*/primary = $AC/g" $PFILE
-	
+
 	# rofi
 	cat > $RFILE <<- EOF
 	/* colors */
 
 	* {
 	  al:    #00000000;
-	  bg:    ${BG}FF;
+	  bg:    ${BG_TRANSPARENCY}FF;
 	  ac:    ${AC}FF;
 	  se:    ${AC}26;
 	  fg:    ${FG}FF;
 	}
 	EOF
-	
+
 	polybar-msg cmd restart
 }
 

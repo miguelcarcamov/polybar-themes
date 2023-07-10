@@ -3,7 +3,6 @@
 # Color files
 PFILE="$HOME/.config/polybar/shades/colors.ini"
 RFILE="$HOME/.config/polybar/shades/scripts/rofi/colors.rasi"
-WFILE="$HOME/.cache/wal/colors.sh"
 
 # Get colors
 pywal_get() {
@@ -44,17 +43,12 @@ change_color() {
 }
 
 # Main
-if [[ -x "`which wal`" ]]; then
+if [[ -f "/usr/bin/wal" ]]; then
 	if [[ "$1" ]]; then
 		pywal_get "$1"
 
 		# Source the pywal color file
-		if [[ -e "$WFILE" ]]; then
-			. "$WFILE"
-		else
-			echo 'Color file does not exist, exiting...'
-			exit 1
-		fi
+		. "$HOME/.cache/wal/colors.sh"
 
 		BG=`printf "%s\n" "$background"`
 		FG=`printf "%s\n" "$foreground"`

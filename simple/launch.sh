@@ -10,7 +10,7 @@ launch_bar_default() {
 	elif [[ "$style" == "pwidgets" ]]; then
 		bash "$dir"/pwidgets/launch.sh --main
 	else
-		polybar --reload -q main -c "$dir/$style/config.ini" &	
+		polybar --reload -q main -c "$dir/$style/config.ini" &
 	fi
 }
 
@@ -21,26 +21,28 @@ launch_bar_monitor() {
 	elif [[ "$style" == "pwidgets" ]]; then
 		bash "$dir"/pwidgets/launch.sh --main
 	else
-		MONITOR=$1 polybar --reload -q main -c "$dir/$style/config.ini" &	
+		MONITOR=$1 polybar --reload -q main -c "$dir/$style/config.ini" &
 	fi
 }
 
 launch_bar() {
+    flock 200
 	# Terminate already running bar instances
 	killall -q polybar
 
 	# Wait until the processes have been shut down
-	while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
+	while pgrep -u $UID -x polybar >/dev/null; do sleep 0.5;done
 
 	# Launch the bar
 	if type "polybar"; then
   		for m in $(polybar --list-monitors | cut -d":" -f1); do
 			launch_bar_monitor $m
+            sleep 1
 		done
 	else
 		launch_bar_default
 	fi
-	
+
 }
 
 if [[ "$1" == "--material" ]]; then
@@ -94,7 +96,7 @@ elif [[ "$1" == "--panels" ]]; then
 else
 	cat <<- EOF
 	Usage : launch.sh --theme
-		
+
 	Available Themes :
 	--blocks    --colorblocks    --cuts      --docky
 	--forest    --grayblocks     --hack      --material

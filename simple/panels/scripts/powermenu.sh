@@ -52,7 +52,7 @@ else
 	exit 1
 fi
 
-rofi_command="rofi -no-config -theme $DIR/powermenu.rasi"
+rofi_command="rofi -theme $DIR/$theme/powermenu.rasi"
 
 # Options
 shutdown=" Shutdown"
@@ -64,7 +64,6 @@ logout=" Logout"
 # Confirmation
 confirm_exit() {
 	rofi -dmenu\
-        -no-config\
 		-i\
 		-no-fixed-num-lines\
 		-p "Are You Sure? : "\
@@ -73,7 +72,7 @@ confirm_exit() {
 
 # Message
 msg() {
-	rofi -no-config -theme "$DIR/$theme/message.rasi" -e "Available Options  -  yes / y / no / n"
+	rofi -theme "$DIR/$theme/message.rasi" -e "Available Options  -  yes / y / no / n"
 }
 
 # Variable passed to rofi
