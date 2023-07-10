@@ -3,6 +3,28 @@
 dir="$HOME/.config/polybar"
 themes=(`ls --hide="launch.sh" $dir`)
 
+launch_bar_default() {
+	if [[ "$style" == "hack" || "$style" == "cuts" ]]; then
+		polybar --reload -q top -c "$dir/$style/config.ini" &
+		polybar --reload -q bottom -c "$dir/$style/config.ini" &
+	elif [[ "$style" == "pwidgets" ]]; then
+		bash "$dir"/pwidgets/launch.sh --main
+	else
+		polybar --reload -q main -c "$dir/$style/config.ini" &	
+	fi
+}
+
+launch_bar_monitor() {
+	if [[ "$style" == "hack" || "$style" == "cuts" ]]; then
+		MONITOR=$1 polybar --reload -q top -c "$dir/$style/config.ini" &
+		MONITOR=$1 polybar --reload -q bottom -c "$dir/$style/config.ini" &
+	elif [[ "$style" == "pwidgets" ]]; then
+		bash "$dir"/pwidgets/launch.sh --main
+	else
+		MONITOR=$1 polybar --reload -q main -c "$dir/$style/config.ini" &	
+	fi
+}
+
 launch_bar() {
 	# Terminate already running bar instances
 	killall -q polybar
@@ -11,14 +33,14 @@ launch_bar() {
 	while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
 	# Launch the bar
-	if [[ "$style" == "hack" || "$style" == "cuts" ]]; then
-		polybar -q top -c "$dir/$style/config.ini" &
-		polybar -q bottom -c "$dir/$style/config.ini" &
-	elif [[ "$style" == "pwidgets" ]]; then
-		bash "$dir"/pwidgets/launch.sh --main
+	if type "polybar"; then
+  		for m in $(polybar --list-monitors | cut -d":" -f1); do
+			launch_bar_monitor $m
+		done
 	else
-		polybar -q main -c "$dir/$style/config.ini" &	
+		launch_bar_default
 	fi
+	
 }
 
 if [[ "$1" == "--material" ]]; then
