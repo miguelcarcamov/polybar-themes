@@ -24,7 +24,7 @@ change_color() {
 
 	* {
 	  al:    #00000000;
-	  bg:    ${BG_TRANSPARENCY}FF;
+	  bg:    ${BG}FF;
 	  ac:    ${AC}FF;
 	  se:    ${AC}26;
 	  fg:    ${FG}FF;
