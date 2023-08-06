@@ -14,7 +14,7 @@ pywal_get() {
 change_color() {
 	# polybar
 	BG_TRANSPARENCY="${BG/"#"/"#aa"}"
-    sed -i -e "s/background = #.*/background = $BG_TRANSPARENCY/g" $PFILE
+    	sed -i -e "s/background = #.*/background = $BG_TRANSPARENCY/g" $PFILE
 	sed -i -e "s/foreground = #.*/foreground = $FG/g" $PFILE
 	sed -i -e "s/primary = #.*/primary = $AC/g" $PFILE
 
