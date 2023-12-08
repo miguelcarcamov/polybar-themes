@@ -56,7 +56,7 @@ The main purpose of Polybar is to help users create awesome status bars. It has 
 
 Install following programs on your system before you use these themes.
 
-- **`Polybar`** : Ofcourse, the bar itself
+- **`Polybar`** : Of course, the bar itself
 - **`Rofi`** : For App launcher, network, power and style menus
 - **`pywal`** : For pywal support
 - **`calc`** : For random colors support
@@ -172,7 +172,7 @@ bash ~/.config/polybar/launch.sh --material
 </p>
 
 <p align="center">
-  <!-- sponsors --><a href="https://github.com/Cir-0"><img src="https://github.com/Cir-0.png" width="60px" alt="David N" /></a><a href="https://github.com/pedrosrtavares"><img src="https://github.com/pedrosrtavares.png" width="60px" alt="Pedro Tavares" /></a><a href="https://github.com/jeandutoit"><img src="https://github.com/jeandutoit.png" width="60px" alt="" /></a><a href="https://github.com/neiesc"><img src="https://github.com/neiesc.png" width="60px" alt="Edinei Cavalcanti" /></a><!-- sponsors -->
+  <!-- sponsors --><a href="https://github.com/jeandutoit"><img src="https://github.com/jeandutoit.png" width="60px" alt="" /></a><a href="https://github.com/dkjxnvkdjnvkd888"><img src="https://github.com/dkjxnvkdjnvkd888.png" width="60px" alt="man sun" /></a><!-- sponsors -->
 </p>
 
 ---
